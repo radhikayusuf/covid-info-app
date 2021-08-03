@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/content"
+        android:actionMenuTextColor="@color/white"
+        android:enabled="true"
+        android:title="@string/text_indonesia"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/change"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:title="edit"
+        android:visible="true"
+        app:showAsAction="always"/>
+
+</menu>
