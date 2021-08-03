@@ -16,15 +16,15 @@ import retrofit2.Response;
  * Created by Radhika Yusuf Alifiansyah
  * on 02/Aug/2021
  **/
-public class CovidStroageFactory {
+public class CovidStorageFactory {
 
-    private static CovidStroageFactory INSTANCE = null;
+    private static CovidStorageFactory INSTANCE = null;
 
     private final SharedPreferences preferences;
     private final CovidService service;
     private final Gson gson = new Gson();
 
-    private CovidStroageFactory(Context context) {
+    private CovidStorageFactory(Context context) {
         preferences = context.getSharedPreferences(BuildConfig.APPLICATION_ID, Context.MODE_PRIVATE);
         service = ApiService.createService("https://90da65e274cc.ngrok.io");
     }
@@ -70,9 +70,9 @@ public class CovidStroageFactory {
         return body.getRecovered() == 0 && body.getDeaths() == 0 && body.getConfirmed() == 0;
     }
 
-    public static CovidStroageFactory getInstance(Context context) {
+    public static CovidStorageFactory getInstance(Context context) {
         if (INSTANCE == null) {
-            INSTANCE = new CovidStroageFactory(context);
+            INSTANCE = new CovidStorageFactory(context);
         }
         return INSTANCE;
     }

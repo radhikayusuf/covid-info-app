@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.radhikairfan.covidinfo.data.model.CovidBaseResponseModel;
 import com.radhikairfan.covidinfo.data.storage.BaseCallback;
-import com.radhikairfan.covidinfo.data.storage.CovidStroageFactory;
+import com.radhikairfan.covidinfo.data.storage.CovidStorageFactory;
 import com.radhikairfan.covidinfo.domain.entity.HomeEntity;
 import com.radhikairfan.covidinfo.domain.repository.CovidRepository;
 
@@ -14,10 +14,10 @@ import com.radhikairfan.covidinfo.domain.repository.CovidRepository;
  **/
 public class CovidRepositoryImpl implements CovidRepository {
 
-    private CovidStroageFactory dataSource;
+    private CovidStorageFactory dataSource;
 
     public CovidRepositoryImpl(Context context) {
-        this.dataSource = CovidStroageFactory.getInstance(context);
+        this.dataSource = CovidStorageFactory.getInstance(context);
     }
 
     @Override
