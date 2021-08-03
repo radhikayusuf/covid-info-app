@@ -26,7 +26,7 @@ public class CovidStorageFactory {
 
     private CovidStorageFactory(Context context) {
         preferences = context.getSharedPreferences(BuildConfig.APPLICATION_ID, Context.MODE_PRIVATE);
-        service = ApiService.createService("https://90da65e274cc.ngrok.io");
+        service = ApiService.createService("https://unikom-incovid.herokuapp.com");
     }
 
     private CovidBaseResponseModel getCacheInformation(String country, String date) {
